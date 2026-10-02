@@ -1,30 +1,75 @@
 aid: mostlypdf
 name: MostlyPDF
-description: 'MostlyPDF is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://mostlypdf.com/og.png
+description: MostlyPDF provides a free online suite of PDF tools and a flat‑priced API that consolidates 38 PDF operations—merge, split, compress,
+  OCR, conversion and more—into a single endpoint. Users can process files via base64 payloads with a bearer token, enabling automation of everyday
+  document workflows without per‑operation credit weighting. The service is offered by Mostly Tiny Ltd and includes a free plan with no sign‑up,
+  watermark, or daily limits.
 url: https://raw.githubusercontent.com/api-evangelist/mostlypdf/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-02 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-02'
 modified: '2026-10-02'
 tags:
 - Company
-apis: []
+- PDF
+- API
+- Automation
+- FreeTools
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: SecurityTxt
+  url: well-known/mostlypdf-security.txt
+- type: SecurityTxt
+  url: well-known/mostlypdf-mostly-pdf-security.txt
+- type: WellKnown
+  url: well-known/mostlypdf-well-known.yml
+- type: Authentication
+  url: authentication/mostlypdf-authentication.yml
+- type: LLMsTxt
+  url: llms/mostlypdf-llms.txt
+- type: Hosts
+  url: hosts/mostlypdf-hosts.yml
+- type: Vendors
+  url: vendors/mostlypdf-vendors.yml
+- type: Blog
+  url: https://mostlypdf.com/blog
+- type: DomainSecurity
+  url: security/mostlypdf-domain-security.yml
 - type: Website
   url: https://mostlypdf.com
 - type: Documentation
   url: https://mostlypdf.com/docs
-x-submission-notes: Single-endpoint REST API for 38 PDF operations (merge, split, compress, OCR, conversion).
-  Second notice (2905, 2026-09-30) corrects contact from hi@mostlypdf.com to hello@mostlytiny.io.
-x-submission-probe: root 200; docs 200; OpenAPI 3.1.0 1 path (POST /v1/process, server mostly-pdf.web.app);
-  llms.txt 200; 404 probe 404
+- type: APIReference
+  url: https://mostlypdf.com/docs
+- type: Support
+  url: https://mostlypdf.com/support
+- type: TermsOfService
+  url: https://mostlypdf.com/terms
+- type: PrivacyPolicy
+  url: https://mostlypdf.com/legal/privacy
+- type: SignIn
+  url: https://mostlypdf.com/signin
+apis:
+- name: MostlyPDF API
+  description: Run any MostlyPDF tool programmatically via a single POST endpoint.
+  humanURL: https://mostly-pdf.web.app/docs
+  baseURL: https://mostly-pdf.web.app
+  aid: mostlypdf:mostlypdf-api
+x-submission-notes: Single-endpoint REST API for 38 PDF operations (merge, split, compress, OCR, conversion). Second notice (2905, 2026-09-30)
+  corrects contact from hi@mostlypdf.com to hello@mostlytiny.io.
+x-submission-probe: root 200; docs 200; OpenAPI 3.1.0 1 path (POST /v1/process, server mostly-pdf.web.app); llms.txt 200; 404 probe 404
 x-submitted-by: hello@mostlytiny.io (apis.io/add, 2026-09-29)
+x-enrichment:
+  date: '2026-10-02'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

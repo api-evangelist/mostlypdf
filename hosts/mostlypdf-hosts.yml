@@ -1,0 +1,54 @@
+generated: '2026-10-02'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 2
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.mostlypdf.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: mostlypdf.com
+  role: api
+  relation: own
+- host: mostly-pdf.web.app
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  - docs
+  registrable_domain: web.app
+  role: other
+  relation: other-domain
+- host: mostlypdf.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Blog
+  - Website
+  - Documentation
+  - APIReference
+  - Support
+  - TermsOfService
+  - PrivacyPolicy
+  - SignIn
+  serves:
+  - cdn
+  vendor: fastly
+  registrable_domain: mostlypdf.com
+  role: website
+  relation: own

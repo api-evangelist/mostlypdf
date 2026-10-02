@@ -1,0 +1,39 @@
+generated: '2026-10-02'
+method: probed
+source: https://mostlypdf.com/legal/privacy?lang=en
+signals:
+  data_subject_request:
+    note: Provides contact for exercising data subject rights.
+    evidence:
+      - source: https://mostlypdf.com/legal/privacy?lang=en
+        http_status: 200
+        fetched: "true"
+        quote: "You can contact us about this policy, or to exercise your rights, at hello@mostlytiny.io."
+  subprocessors:
+    note: Lists third‑party processors used.
+    evidence:
+      - source: https://mostlypdf.com/legal/privacy?lang=en
+        http_status: 200
+        fetched: "true"
+        quote: "We share personal data with: service providers and processors who operate mostlypdf.com on our behalf (for example Google Cloud and Firebase (europe-west2): hosting, sign‑in, database, file storage and processing; Google reCAPTCHA (via Firebase App Check): bot protection for server‑side tools; Cloudflare: edge security; Stripe: payments; Resend: email; Fathom Analytics: cookie‑free statistics; PostHog (EU): product analytics; Anthropic: the AI assistant, which receives the text of the document you ask it about)."
+  ai_transparency:
+    note: Discloses AI processing and that data is not used for training.
+    evidence:
+      - source: https://mostlypdf.com/legal/privacy?lang=en
+        http_status: 200
+        fetched: "true"
+        quote: "When you use the AI assistant, the text of the document you ask about and your question are sent to Anthropic, PBC, which provides the model and processes them on our behalf under its commercial terms, which do not permit training on them. Anthropic deletes them from its systems within 30 days, unless the law requires it to keep them longer or it needs them to enforce its usage policies."
+  data_residency:
+    note: Data processing occurs on servers located in London (UK).
+    evidence:
+      - source: https://mostlypdf.com/legal/privacy?lang=en
+        http_status: 200
+        fetched: "true"
+        quote: "Others — and any tool your browser cannot run — upload the file to our servers in London to process it."
+  data_retention:
+    note: Retains AI assistant data for up to 30 days.
+    evidence:
+      - source: https://mostlypdf.com/legal/privacy?lang=en
+        http_status: 200
+        fetched: "true"
+        quote: "Anthropic deletes them from its systems within 30 days, unless the law requires it to keep them longer or it needs them to enforce its usage policies."

@@ -1,0 +1,12 @@
+generated: '2026-10-02'
+method: searched
+source: https://mostlypdf.com/docs#auth
+schemes:
+  - type: http
+    scheme: bearer
+    description: Bearer token with key starting with sk_
+    header: Authorization
+  - type: http
+    scheme: bearer
+    description: Alternative header x-api-key accepted
+    header: x-api-key
